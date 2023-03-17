@@ -15,7 +15,7 @@ class AppBarApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          colorSchemeSeed: const Color(0xff6750a4), useMaterial3: true),
+          colorSchemeSeed: Color.fromARGB(255, 255, 148, 48), useMaterial3: true),
       home: const AppBarExample(),
     );
   }
@@ -27,8 +27,8 @@ class AppBarExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
-    final Color oddItemColor = colorScheme.primary.withOpacity(0.05);
-    final Color evenItemColor = colorScheme.primary.withOpacity(0.15);
+    final Color oddItemColor = colorScheme.primary.withOpacity(0.05);//調節淺色
+    final Color evenItemColor = colorScheme.primary.withOpacity(0.2);//調節深色
     const int tabsCount = 3;
 
     return DefaultTabController(
@@ -36,7 +36,16 @@ class AppBarExample extends StatelessWidget {
       length: tabsCount,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Not3'),
+          
+          title: 
+
+            const Text('Not3',
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+
+
           // This check specifies which nested Scrollable's scroll notification
           // should be listened to.
           //
@@ -53,7 +62,7 @@ class AppBarExample extends StatelessWidget {
           // scrolled underneath the app bar.
           scrolledUnderElevation: 4.0,
           shadowColor: Theme.of(context).shadowColor,
-          bottom: TabBar(
+          bottom: TabBar( //Icon AppBar
             tabs: <Widget>[
               Tab(
                 icon: const Icon(Icons.accessibility),
@@ -68,30 +77,32 @@ class AppBarExample extends StatelessWidget {
                 text: titles[2],
               ),
             ],
+            
           ),
         ),
         body: TabBarView(
           children: <Widget>[
-            ListView.builder(
-              itemCount: 25,
-              itemBuilder: (BuildContext context, int index) {
+            ListView.builder(//簡介
+              itemCount: 5, //行數(計數次數)
+              itemBuilder: (BuildContext context, int index) { //index是區域變數
                 return ListTile(
-                  tileColor: index.isOdd ? oddItemColor : evenItemColor,
+                  tileColor: index.isOdd ? oddItemColor : evenItemColor,//設定顏色
                   title: Text('${titles[0]} $index'),
+                  
                 );
               },
             ),
-            ListView.builder(
-              itemCount: 25,
+            ListView.builder(//註冊
+              itemCount: 5,
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
                   tileColor: index.isOdd ? oddItemColor : evenItemColor,
-                  title: Text('${titles[1]} $index'),
+                  title: Text('${titles[1]} $index'), //這裡的index是appbar的變數
                 );
               },
             ),
-            ListView.builder(
-              itemCount: 25,
+            ListView.builder(//登入
+              itemCount: 4,
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
                   tileColor: index.isOdd ? oddItemColor : evenItemColor,
