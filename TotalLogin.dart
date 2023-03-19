@@ -130,6 +130,7 @@ class AppBarExample extends StatelessWidget {
                   },
                 ),
                 TextFormField(
+                  obscureText: true, //密碼隱藏，false則顯示
                   decoration: const InputDecoration(
                     hintText: '請輸入密碼',
                   ),
@@ -141,6 +142,7 @@ class AppBarExample extends StatelessWidget {
                   },
                 ),
                 TextFormField(
+                  obscureText: true, //密碼隱藏
                   decoration: const InputDecoration(
                     hintText: '請再輸入一次密碼',
                   ),
