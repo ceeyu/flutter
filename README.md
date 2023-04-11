@@ -21,6 +21,7 @@ widelab flutter
 * [《Flutter实战·第二版》](https://book.flutterchina.club/chapter3/input_and_form.html#_3-5-1-textfield)
 
 * [Flutter Formosa](https://medium.com/flutter-formosa)
+
 # 參、Widget相關
 * [Basic widgets](https://docs.flutter.dev/development/ui/widgets/basics)
 ## Widget Catalog 
@@ -40,12 +41,15 @@ widelab flutter
 [input label](https://api.flutter.dev/flutter/material/InputDecoration-class.html)
 
 
+
 ## List
 List view.builder 是給"大量"垂直資料的
 [Day 24：ListView 列表元件](https://ithelp.ithome.com.tw/articles/10226338)
 
 # 肆、線上編譯器"Dartpad"
 
-# 伍、Package
-
+# 伍、Package引入相關
 * [pub.dev](https://pub.dev/)
+
+＃ 陸、其他
+* [material_3](https://m3.material.io/develop/flutter)
