@@ -54,18 +54,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     );
     return Scaffold(
       appBar: AppBar(
-        // actions: <Widget>[
-        //   TextButton(
-        //     style: style,
-        //     onPressed: () {},
-        //     child: const Text('使用者'),
-        //   ),
-        //   TextButton(
-        //     style: style,
-        //     onPressed: () {},
-        //     child: const Text('設定'),
-        //   ),
-        // ],
         title: Text('Not3'),
         elevation: 0.0,
         leading: IconButton(
