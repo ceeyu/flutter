@@ -59,7 +59,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         leading: IconButton(
           icon: const Icon(Icons.person),
           tooltip: '使用者',
-          onPressed: () => debugPrint('設定 button is pressed.'),
+          onPressed: () => debugPrint('User button is pressed.'),
         ),
         actions: <Widget>[
           IconButton(
